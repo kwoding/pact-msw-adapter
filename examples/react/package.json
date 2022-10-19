@@ -17,9 +17,11 @@
     "test": "cross-env CI=true react-scripts test --verbose",
     "test:cypress": "cypress run --browser chrome",
     "test:cypress:open": "cypress open",
+    "test:playwright": "playwright test playwright --headed",
     "eject": "react-scripts eject",
     "start:test:cy:run": "start-server-and-test http://localhost:3000 test:cypress",
-    "start:test:cy:open": "start-server-and-test http://localhost:3000 test:cypress:open"
+    "start:test:cy:open": "start-server-and-test http://localhost:3000 test:cypress:open",
+    "start:test:playwright": "start-server-and-test http://localhost:3000 test:playwright"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +39,8 @@
     ]
   },
   "devDependencies": {
+    "@pactflow/pact-msw-adapter": "^1.3.0",
+    "@playwright/test": "^1.27.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@types/axios": "^0.14.0",
     "@types/react": "^17.0.4",
